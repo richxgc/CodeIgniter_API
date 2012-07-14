@@ -1,4 +1,5 @@
-<?php 
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+//https://github.com/jmathai/foursquare-async
 class Fs extends CI_Model{
 
 	var $clientid = 'XXXXXXXX';
@@ -13,7 +14,7 @@ class Fs extends CI_Model{
 	}
 	//https://developer.foursquare.com/docs/venues/explore
 	function explore_venues($data){
-		$foursquare_obj = new EpiFoursquare();
+		$foursquare_obj = new EpiFoursquare($clientid,$clientsecret);
 		return $foursquare_obj->get('venues/explore',$data);
 	}
 }

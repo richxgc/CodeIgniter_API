@@ -6,7 +6,7 @@
  * DATE: 16-06-2012
  * DESCRIPTION: the tw class provide easy access to functions of library: Twitter Async developed by jmathai
  * into CodeIgniter environment
-*/
+ */
 class Tw extends CI_Model{
 
 	var $consumer_key = 'XXXXX';
@@ -58,6 +58,15 @@ class Tw extends CI_Model{
 		$twitter_obj->setToken($this->session->userdata('oauth_token'), $this->session->userdata('oauth_token_secret'));
 		return $twitter_obj->get('/account/verify_credentials.json');
 	}
+	/* FUNCTION: get_by_id()
+	 * PARAMETERS: a valid twitter id
+	 * RETURNS: an object array with the twitter account user information
+	 * DESCRIPTION: 
+	*/
+	function get_by_id($tw_id){
+		$twitter_obj = new EpiTwitter($this->consumer_key, $this->consumer_secret);
+		return $twitter_obj->get('/users/show.json', array('user_id' => $tw_id));
+	}
 	/* FUNCTION: get_friends()
 	 * PARAMETERS: none
 	 * RETURNS: an object array with user friend list
@@ -91,6 +100,5 @@ class Tw extends CI_Model{
 			return FALSE
 		}	
 	}
-	//TODO: create function to get the full frame image account
 }
 ?>
