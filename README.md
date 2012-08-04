@@ -26,13 +26,13 @@ $this->load->view('login',$data);
 <pre>
 <code>
 	//login view
-	<a href="<?php echo $fb_login;?>">Login with Facebook</a>
-	<a href="<?php echo $tw_login;?>">Login with Twitter</a>
+	< a href="<?php echo $fb_login;?>">Login with Facebook </ a>
+	< a href="<?php echo $tw_login;?>">Login with Twitter </ a>
 </code>
 </pre>
 
-<p>2. after user allow your application you have the respective tokens with this tokens you have acces to user data, to get this data you have to call function get_user(), in twitter case you have to call function set_access_token() after token request (aka login action).</p>
-<p>Note: you may have configure the callback url at your application controll panel, this url must be your controller function that has to process the respective query information</p>
+<p>2. after user allow your application you have the respective tokens, with this tokens you have acces to user data, to get this data you have to call get_user() function, in twitter case you will have to call set_access_token() function after token request (aka login action).</p>
+<p>Note: you may have configure the callback url at your application controll panel, this url must be your controller function that has to process the respective query information, in facebook case the callback url is in fb model.</p>
 
 <pre>
 <code>

@@ -27,9 +27,10 @@ class Fb extends CI_Model{
 	 * DESCRIPTION: get link to facebook user login
 	 */
 	function get_auth_url(){
+		//note: change redirect uri index
 		$config = array(
 			'scope' => 'email,user_birthday,publish_stream,publish_actions,read_friendlists',
-        	'redirect_uri' => base_url().'index.php/user_controller/facebook_controll'
+        	'redirect_uri' => base_url().'index.php/your_controller/your_fb_function'
         );
 		return $this->facebook->getLoginUrl($config);
 	}
