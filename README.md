@@ -22,15 +22,6 @@ $this->load->view('login',$data);
 </code>
 </pre>
 
-<p>Then user click on link like this:</p>
-<pre>
-<code>
-	//login view
-	a href="<?php echo $fb_login;?>"> Login with Facebook
-	a href="<?php echo $tw_login;?>"> Login with Twitter
-</code>
-</pre>
-
 <p>2. After user allow your application you have the respective tokens, with this tokens you have acces to user data, to get this data you have to call get_user() function, in twitter case you will have to call set_access_token() function after token request (aka login action).</p>
 <p>Note: you may have configure the callback url at your application controll panel, this url must be your controller function that has to process the respective query information, in facebook case the callback url is in fb model.</p>
 
@@ -78,17 +69,14 @@ $this->db->insert('users');
 
 <p>3. Use this data at your convenience :)</p>
 
-<h3>
-<a name="license" class="anchor" href="#license"><span class="mini-icon mini-icon-link"></span></a>
-Licence
-</h3>
+<h3>Licence</h3>
 <h5>CodeIgniter API Library is under MIT Licence</h5>
 
-<p>The MIT License (MIT)
-Copyright (c) <2012> 
+<p>The MIT License (MIT)</p>
+<p>Copyright © 2012, @grcardo</p>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
